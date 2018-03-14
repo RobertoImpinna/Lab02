@@ -19,6 +19,9 @@ public class AlienDictionary {
 			return null;
 	}
 	
+	public Word getWord(String g) {
+		return vocabolario.get(g);
+	}
 	
 	public void aggiorna(String a, Word f) {
 		vocabolario.replace(a, f);

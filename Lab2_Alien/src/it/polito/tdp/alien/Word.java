@@ -31,7 +31,19 @@ public class Word {
 		sinonimi.add(b);
 	}
 	
-	
+	public boolean controllo(String p) {
+		if(p.equals(array[1])) {
+			return false;
+		}
+		for(String s:sinonimi) {
+			if(s.equals(p)) {
+				return false;
+			}
+		}
+		
+		return true;			
+				
+	}
 	
 	
 	

@@ -37,7 +37,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </TextField>
-                  <Button fx:id="btnTranslate" mnemonicParsing="false" onAction="#onTranslate" text="Translate">
+                  <Button fx:id="btnTranslate" defaultButton="true" mnemonicParsing="false" onAction="#onTranslate" text="Translate">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin>
@@ -52,7 +52,7 @@
                   </ImageView>
                </children>
             </HBox>
-            <TextArea fx:id="txtResult" prefHeight="200.0" prefWidth="200.0" promptText="Welcome to Alien dictionary v2018" />
+            <TextArea fx:id="txtResult" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="Welcome to Alien dictionary v2018" />
          </children>
       </VBox>
    </center>

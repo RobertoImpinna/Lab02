@@ -54,7 +54,12 @@ public class AlienController {
     	
     	if(stringa.equals("")) {
     		txtResult.appendText("Inserisci parola!\n");
+    		txtInsert.clear();	
     	return;
+    	}
+    	
+    	if(vett.length>2) {
+    		txtResult.appendText("Formato testo errato!\n");
     	}
     	
     	if(vett.length==2) {
@@ -67,10 +72,17 @@ public class AlienController {
     			//v.aggiorna(vett[0], w);
     			//txtResult.appendText("Traduzione aggiornata!\n"+vett[0]+" = "+vett[1]+"\n");
     			
+    			if(v.getWord(vett[0]).controllo(vett[1])==true) {
     			//AGGIUNGE VARIANTI
     			v.aggiungiVarianti(vett[0], vett[1]);
     			txtResult.appendText("Variante aggiunta!\n"+vett[0]+" = "+vett[1]+"\n");
+    			txtInsert.clear();	
     			return;
+    			}else {
+    				txtResult.appendText("Treaduzione gia inserita!\n");
+    				txtInsert.clear();	
+    				return;
+    			}
     		}
     			
     		
@@ -87,7 +99,7 @@ public class AlienController {
     		
     	
     	
-    	
+    	txtInsert.clear();	
     	
     }
 
