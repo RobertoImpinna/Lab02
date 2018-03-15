@@ -49,7 +49,7 @@ public class AlienController {
     @FXML
     void onTranslate(ActionEvent event) {
     	txtResult.clear();
-    	String stringa=txtInsert.getText().trim();
+    	String stringa=txtInsert.getText().toLowerCase().trim();
     	String vett[]=stringa.split(" ");
     	
     	if(stringa.equals("")) {
